@@ -10,7 +10,7 @@ class Tabs extends Component {
 
 
           <div className="radio__container">
-          <input type="radio" className="radio__button" name="tab" id="cheapest"  />
+          <input type="radio" className="radio__button" name="tab" id="cheapest" onChange={ this.props.FilterTickets} />
             <label className="radio__label cheapest" htmlFor="cheapest">
               самый дешевый
             </label>
@@ -18,7 +18,7 @@ class Tabs extends Component {
 
 
           <div className="radio__container">
-          <input type="radio" className="radio__button" name="tab" id="fastest" defaultChecked/>
+          <input type="radio" className="radio__button" name="tab" id="fastest" onChange={ this.props.FilterTickets} />
             <label className="radio__label  fastest" htmlFor="fastest">
               самый быстрый
             </label>

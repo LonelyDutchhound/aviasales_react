@@ -3,18 +3,15 @@ import '.././css/ticket.css';
 //import props from '';
 
 class Ticket extends Component {
-  state = {
-    isLoaded: true
-  }
 
   render () {
     const {tickets} = this.props
-    const ticketBlock = this.state.isLoaded &&
+    const ticketBlock =
       <div className="ticket__block">
 
         <div className="ticket__header">
-          <div className="ticket__price"></div>
-          <div className="ticket__complogo"></div>
+          <div className="ticket__price">{}</div>
+          <div className="ticket__complogo">{}</div>
         </div>
 
         <div className="ticket__options">
