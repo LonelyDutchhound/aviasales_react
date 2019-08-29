@@ -1,0 +1,9 @@
+.main {
+  display: flex;
+  position: relative;
+  flex-shrink: 2;
+  width: 960px;
+  height: 1350px;
+  margin: auto;
+  background: #F3F7FA;
+}

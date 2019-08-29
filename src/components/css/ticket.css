@@ -1,0 +1,45 @@
+.ticket__container {
+  position: absolute;
+  width: 502px;
+}
+
+.ticket__block {
+  position: absolute;
+  left: 355px;
+  right: 103px;
+  top: 226px;
+  bottom: 936px;
+  display: flex;
+  flex-flow: column nowrap;
+  width: 502px;
+  height: 184px;
+  background: #FFFFFF;
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+}
+
+.ticket__header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.ticket__price {
+  font-family: Open Sans;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 24px;
+}
+
+.ticket__options {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.ticket__route,
+.ticket__duration,
+.ticket__stops {
+  
+}

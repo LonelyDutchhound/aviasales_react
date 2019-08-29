@@ -1,0 +1,5 @@
+* {
+  margin: 0;
+  padding: 0;
+  cursor: url("./components/images/Cursor.svg"), pointer;
+}

@@ -1,0 +1,57 @@
+.tabs__container {
+  position: absolute;
+  width: 503px;
+  height: 50px;
+  left: 355px;
+  top: 156px;
+}
+
+.tabs__form {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background: #FFFFFF;
+  border: 1px solid #DFE5EC;
+  box-sizing: border-box;
+  border-radius: 5px;
+}
+
+.radio__container {
+  position: relative;
+  display: flex;
+}
+
+.radio__button{
+  display: none;
+}
+
+.radio__label {
+  display: flex;
+  width: 252px;
+  height: 50px;
+  box-sizing: border-box;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  font-family: Open Sans;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 20px;
+}
+
+.cheapest {
+  border-radius: 5px 0 0 5px;
+}
+
+.fastest {
+  border-radius: 0 5px 5px 0;
+}
+
+.radio__button:checked ~label {
+  color: #fff;
+  background: #2196F3;
+}
