@@ -3,7 +3,9 @@ import '.././css/ticket.css';
 
 
 function TicketsList ( props ) {
-  let ticketData = [];
+console.log(props.tickets);
+
+  let ticketBlock = [];
   for (let i = 0; i < props.tickets.length; i++) {
     let { price, carrier, segments: [ { origin, destination, duration, date, stops: stops1 }, { origin:origin2, destination:destination2, duration:duration2, date:date2, stops: stops2 }] } = props.tickets[i];
 
@@ -19,7 +21,7 @@ function TicketsList ( props ) {
 
     const carrierLogo = `http://pics.avs.io/99/36/${ carrier }.png`
 
-    ticketData.push(
+    ticketBlock.push(
       <li className="ticket__list-element" key={ i }>
 
           <div className="ticket__block">
@@ -29,18 +31,59 @@ function TicketsList ( props ) {
             </div>
 
             <div className="ticket__options">
-              <div className="ticket__route">{ origin } - { destination }</div>
-              <div className="ticket__duration">{ duration }</div>
-              <div className="ticket__stops"> { $stops1.join(', ') }</div>
+              <div className="ticket__route">
+                <div>
+                  { origin } - { destination }
+                </div>
+                <div>
+                  { date }
+                </div>
+              </div>
+              <div className="ticket__duration">
+                <div>
+                  <span> в пути </span>
+                </div>
+                <div>
+                  { duration }
+                </div>
+              </div>
+              <div className="ticket__stops">
+                <div>
+                  <span> { $stops1.length} пересадки </span>
+                </div>
+                <div>
+                  { $stops1.join(', ') }
+                </div>
+              </div>
             </div>
 
             <div className="ticket__options">
-              <div className="ticket__route">{ origin2 } - { destination2 }</div>
-              <div className="ticket__duration">{ duration2 }</div>
-              <div className="ticket__stops">{ $stops2.join(', ') }</div>
+              <div className="ticket__route">
+                <div>
+                  { origin2 } - { destination2 }
+                </div>
+                <div>
+                  { date2 }
+                </div>
+              </div>
+              <div className="ticket__duration">
+                <div>
+                  <span> в пути </span>
+                </div>
+                <div>
+                  { duration2 }
+                </div>
+              </div>
+              <div className="ticket__stops">
+                <div>
+                  <span> { $stops2.length} пересадки </span>
+                </div>
+                <div>
+                  { $stops2.join(', ') }
+                </div>
+              </div>
             </div>
           </div>
-
       </li>
     );
   }
@@ -48,7 +91,7 @@ function TicketsList ( props ) {
   return(
     <div className="ticket__container" >
       <ul className="ticket__list" >
-        { ticketData }
+        { ticketBlock }
       </ul>
     </div>
   )

@@ -14,10 +14,10 @@
 .ticket__block {
   position: relative;
   display: flex;
+  flex: 0 0 502px;
   flex-flow: column nowrap;
-  justify-content: space-between;
+  justify-content: space-around;
   margin-bottom: 20px;
-  width: 502px;
   height: 184px;
   background: #FFFFFF;
   box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
@@ -26,14 +26,15 @@
 
 .ticket__header {
   display: flex;
+  flex: 0 0 36px;
   flex-direction: row;
   justify-content: space-between;
+  position: relative;
+  margin: 20px 50px 0 20px;
 }
 
 .ticket__price {
   position: relative;
-  top: 26px;
-  left: 20px;
   font-family: Open Sans;
   font-style: normal;
   font-weight: 600;
@@ -44,12 +45,12 @@
 .ticket__complogo {
   position: relative;
   float: right;
-  top: 20px;
-  right: 50px;
+
 }
 
 .ticket__options {
   display: flex;
+  flex: 0 0 39px;
   flex-direction: row;
   justify-content: space-around;
 }
