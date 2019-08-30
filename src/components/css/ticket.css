@@ -1,16 +1,22 @@
 .ticket__container {
   position: absolute;
   width: 502px;
-}
-
-.ticket__block {
-  position: absolute;
   left: 355px;
   right: 103px;
   top: 226px;
-  bottom: 936px;
+}
+
+.ticket__list {
+  position: relative;
+  list-style: none;
+}
+
+.ticket__block {
+  position: relative;
   display: flex;
   flex-flow: column nowrap;
+  justify-content: space-between;
+  margin-bottom: 20px;
   width: 502px;
   height: 184px;
   background: #FFFFFF;
@@ -25,11 +31,21 @@
 }
 
 .ticket__price {
+  position: relative;
+  top: 26px;
+  left: 20px;
   font-family: Open Sans;
   font-style: normal;
   font-weight: 600;
   font-size: 24px;
   line-height: 24px;
+}
+
+.ticket__complogo {
+  position: relative;
+  float: right;
+  top: 20px;
+  right: 50px;
 }
 
 .ticket__options {
@@ -41,5 +57,5 @@
 .ticket__route,
 .ticket__duration,
 .ticket__stops {
-  
+
 }
