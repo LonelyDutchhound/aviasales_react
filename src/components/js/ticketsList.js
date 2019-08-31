@@ -22,27 +22,27 @@ const ticketBlock = props.tickets.map(({ price, carrier, segments }, index) => {
             return (
               <div className="ticket__options">
                 <div className="ticket__route">
-                  <div>
+                  <div className="ticket__segments-row1">
                     { origin } - { destination }
                   </div>
-                  <div>
+                  <div className="ticket__segments-row2">
                     { date }
                   </div>
                 </div>
                 <div className="ticket__duration">
-                  <div>
+                  <div className="ticket__segments-row1">
                     <span> в пути </span>
                   </div>
-                  <div>
+                  <div className="ticket__segments-row2">
                     { duration }
                   </div>
                 </div>
 
                 <div className="ticket__stops">
-                  <div>
+                  <div className="ticket__segments-row1">
                     <span> { Object.values(stops).length } пересадки </span>
                   </div>
-                  <div>
+                  <div className="ticket__segments-row2">
                     { Object.values(stops).join(', ') }
                   </div>
                 </div>

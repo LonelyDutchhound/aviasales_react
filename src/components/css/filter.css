@@ -1,35 +1,31 @@
 .filter__container {
   position: absolute;
-  left: 10.73%;
-  right: 65.1%;
-  top: 11.55%;
-  bottom: 69.8%;
+  left: 103px;
+  right: 625px;
+  top: 160px;
+  width: 232px;
+  height: 252px;
   background: #FFFFFF;
   box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
   border-radius: 5px;
-  font-family: Open Sans;
-  font-style: normal;
   display: flex;
   flex-direction: column;
   align-items: flex-end;
-  padding: 10px 0;
-}
-
-.filter__form {
-  width: 232px;
-  height: 252px;
-  box-sizing: border-box;
 }
 
 .filter__option-title {
+  width: 232px;
+  height: 40px;
   font-weight: 600;
   font-size: 12px;
-  letter-spacing: 0.056em;
+  letter-spacing: 0.055em;
   text-transform: uppercase;
   color: #4A4A4A;
-  padding: 8.5px 20px;
-  box-sizing: border-box;
-  margin-bottom: 1px;
+  margin-bottom: 5px;
+}
+
+.filter__option-title p {
+  margin: 18px 20px auto;
 }
 
 .filter__multioptions {
@@ -41,7 +37,7 @@
 .filter__option {
   position: relative;
   width: 232px;
-  height: 40.5px;
+  height: 40px;
 
 }
 
