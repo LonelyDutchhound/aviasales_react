@@ -1,6 +1,4 @@
 import React, { Component } from 'react';
-import picker from '.././images/Shape.png';
-import cursor from '.././images/Cursor.svg';
 import '.././css/filter.css'
 
 class Filter extends Component {

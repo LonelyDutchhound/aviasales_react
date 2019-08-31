@@ -14,12 +14,12 @@ const ticketBlock = props.tickets.map(({ price, carrier, segments }, index) => {
       <div className="ticket__block">
         <div className="ticket__header">
           <div className="ticket__price">{ price }</div>
-          <div className="ticket__complogo"><img src={ carrierLogo } /></div>
+          <div className="ticket__complogo"><img src={ carrierLogo } alt="company logo" /></div>
         </div>
 
         { Object.values(segments).map( ({ date, destination, duration, origin, stops}, index) => {
 
-          const durHours = Math.round(duration/60);
+          const durHours = Math.floor(duration/60);
           const durMin = duration - Math.floor(duration/60)*60;
 
           let changes, stopNames;
@@ -74,7 +74,7 @@ const ticketBlock = props.tickets.map(({ price, carrier, segments }, index) => {
 });
 
   return(
-    <div className="ticket__container" >
+    <div className="ticket__container">
       <ul className="ticket__list" >
         { ticketBlock }
       </ul>
