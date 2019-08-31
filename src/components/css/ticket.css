@@ -80,3 +80,7 @@
   font-size: 14px;
   line-height: 21px;
 }
+
+.durHoursMins {
+  text-transform: lowercase;
+}

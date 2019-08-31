@@ -19,6 +19,25 @@ const ticketBlock = props.tickets.map(({ price, carrier, segments }, index) => {
 
         { Object.values(segments).map( ({ date, destination, duration, origin, stops}, index) => {
 
+          const durHours = Math.round(duration/60);
+          const durMin = duration - Math.floor(duration/60)*60;
+
+          let changes, stopNames;
+          switch (Object.values(stops).length) {
+            case 0:
+              changes = 'без пересадок';
+              stopNames = ' ';
+              break;
+            case 1:
+              changes = 'пересадка';
+              stopNames = Object.values(stops).length;
+              break;
+            default:
+              changes = 'пересадки';
+              stopNames = Object.values(stops).length;
+          }
+
+
             return (
               <div className="ticket__options">
                 <div className="ticket__route">
@@ -33,14 +52,14 @@ const ticketBlock = props.tickets.map(({ price, carrier, segments }, index) => {
                   <div className="ticket__segments-row1">
                     <span> в пути </span>
                   </div>
-                  <div className="ticket__segments-row2">
-                    { duration }
+                  <div className="ticket__segments-row2 durHoursMins">
+                    { durHours } ч { durMin } м
                   </div>
                 </div>
 
                 <div className="ticket__stops">
                   <div className="ticket__segments-row1">
-                    <span> { Object.values(stops).length } пересадки </span>
+                    <span> { stopNames } { changes } </span>
                   </div>
                   <div className="ticket__segments-row2">
                     { Object.values(stops).join(', ') }
