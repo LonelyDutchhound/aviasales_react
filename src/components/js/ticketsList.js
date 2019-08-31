@@ -13,7 +13,7 @@ const ticketBlock = props.tickets.map(({ price, carrier, segments }, index) => {
 
       <div className="ticket__block">
         <div className="ticket__header">
-          <div className="ticket__price">{ price }</div>
+          <div className="ticket__price">{ price.toLocaleString() } р </div>
           <div className="ticket__complogo"><img src={ carrierLogo } alt="company logo" /></div>
         </div>
 
@@ -21,6 +21,8 @@ const ticketBlock = props.tickets.map(({ price, carrier, segments }, index) => {
 
           const durHours = Math.floor(duration/60);
           const durMin = duration - Math.floor(duration/60)*60;
+
+          //const depLand =
 
           let changes, stopNames;
           switch (Object.values(stops).length) {
@@ -36,16 +38,16 @@ const ticketBlock = props.tickets.map(({ price, carrier, segments }, index) => {
               changes = 'пересадки';
               stopNames = Object.values(stops).length;
           }
-
+          const depTime = new Date(date).toLocaleTimeString('ru-RU').substring(0,5);
 
             return (
-              <div className="ticket__options">
+              <div className="ticket__options" key={ date }>
                 <div className="ticket__route">
                   <div className="ticket__segments-row1">
                     { origin } - { destination }
                   </div>
                   <div className="ticket__segments-row2">
-                    { date }
+                    { depTime } - {}
                   </div>
                 </div>
                 <div className="ticket__duration">

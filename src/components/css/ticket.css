@@ -39,6 +39,7 @@
 
 .ticket__price {
   position: relative;
+  width: 147px;
   font-family: Open Sans;
   font-style: normal;
   font-weight: 600;
@@ -53,7 +54,7 @@
 .ticket__complogo {
   position: relative;
   float: right;
-  padding: 0 0 13px 230px;
+  padding: 0 0 13px 170px;
   width: 110px;
   height: 36px;
 }
