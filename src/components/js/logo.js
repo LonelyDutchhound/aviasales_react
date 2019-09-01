@@ -6,7 +6,7 @@ class Logotype extends Component {
   render () {
     return (
       <div className="logo__container" onLoad = { this.props.LoadDefaultTickets } >
-        <img src={ logo } alt="avasales logotype"/>
+        <img src={ logo } alt="avasales logotype" />
       </div>
     )
   }

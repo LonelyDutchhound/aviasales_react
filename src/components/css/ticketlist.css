@@ -1,6 +1,7 @@
 .ticket__container {
   position: absolute;
   width: 502px;
+  height: auto;
   left: 355px;
   right: 103px;
   top: 230px;
