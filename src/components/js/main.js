@@ -9,18 +9,19 @@ import ticketload from '../utils/ticketload.js';
 class Main extends Component {
   state = {
     tickets: []
-  }
+  };
+
   constructor() {
     super();
     this.onClick = this.FilterTickets.bind(this);
-    this.onLoad = this.LoadDefaultTickets.bind(this);
-  }
+  };
 
   LoadDefaultTickets = async () => {
       const data = await ticketload;
       let setTickets = data.tickets.slice(0, 5);
-      this.setState({ tickets: setTickets })
-  }
+      this.setState({ tickets: setTickets });
+    console.log(this.tickets);
+  };
 
   FilterTickets = async (event) => {
     const { id } = event.target;
@@ -34,7 +35,7 @@ class Main extends Component {
           break;
         case 'fastest':
           fiveTickets = data.tickets.sort( (a, b) => {
-            return  a.segments.reduce( function (acc, { duration } ) { return acc + duration }, 0)
+            return  a.segments.reduce( function ( acc, { duration } ) { return acc + duration }, 0)
             - b.segments.reduce( function (acc, { duration } ) { return acc + duration }, 0)
             } )
             .slice( 0, 5 );
@@ -59,13 +60,17 @@ class Main extends Component {
       }
 
     this.setState({ tickets: fiveTickets })
-  }
+  };
+
+  componentDidMount() {
+    this.LoadDefaultTickets ();
+  };
 
   render () {
 
     return (
       <div className="main" >
-        <Logotype LoadDefaultTickets = { this.LoadDefaultTickets } />
+        <Logotype />
         <Filter FilterTickets = { this.FilterTickets } />
         <Tabs FilterTickets = { this.FilterTickets } />
         <TicketsList tickets = { this.state.tickets } />
